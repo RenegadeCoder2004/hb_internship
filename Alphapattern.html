@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Alphabet Patterns</title>
+</head>
+<body>
+
+<h2>Open Console (F12)</h2>
+
+<script>
+
+function print(str){ console.log(str); }
+
+/* ============ PATTERN 1 ============ */
+function pattern1(){
+for(let i=0;i<6;i++){
+ let s="";
+ for(let j=0;j<=i;j++)
+   s+=String.fromCharCode(65+j)+" ";
+ print(s);
+}
+}
+
+/* ============ PATTERN 2 ============ */
+function pattern2(){
+for(let i=0;i<6;i++){
+ let ch=String.fromCharCode(65+i);
+ print((ch+" ").repeat(i+1));
+}
+}
+
+/* ============ PATTERN 3 ============ */
+function pattern3(){
+for(let i=0;i<6;i++){
+ let s="";
+ for(let j=0;j<=i;j++)
+  s+=String.fromCharCode(65+j)+" ";
+ print(s);
+}
+for(let i=4;i>=0;i--){
+ let s="";
+ for(let j=0;j<=i;j++)
+  s+=String.fromCharCode(65+j)+" ";
+ print(s);
+}
+}
+
+/* ============ PATTERN 4 ============ */
+function pattern4(){
+for(let i=6;i>=1;i--){
+ let s="";
+ for(let j=0;j<i;j++)
+  s+=String.fromCharCode(65+j)+" ";
+ print(s);
+}
+for(let i=1;i<=6;i++){
+ let s="";
+ for(let j=0;j<i;j++)
+  s+=String.fromCharCode(65+j)+" ";
+ print(s);
+}
+}
+
+/* ============ PATTERN 5 ============ */
+function pattern5(){
+for(let i=0;i<6;i++){
+ let s="";
+ for(let j=5;j>=i;j--)
+  s+=String.fromCharCode(65+j)+" ";
+ print(s);
+}
+}
+
+/* ============ PATTERN 6 ============ */
+function pattern6(){
+for(let i=0;i<6;i++){
+ let s="";
+ for(let j=0;j<=i;j++)
+  s+=String.fromCharCode(65+j)+" ";
+ print(s);
+}
+}
+
+/* ============ PATTERN 7 ============ */
+function pattern7(){
+for(let i=0;i<6;i++){
+ let s="";
+ for(let j=5;j>=i;j--)
+  s+=String.fromCharCode(65+j)+" ";
+ print(s);
+}
+}
+
+/* ============ PATTERN 8 ============ */
+function pattern8(){
+for(let i=0;i<6;i++){
+ let s="";
+ for(let j=5;j>=5-i;j--)
+  s+=String.fromCharCode(65+j)+" ";
+ print(s);
+}
+}
+
+/* ============ PATTERN 9 ============ */
+function pattern9(){
+for(let i=6;i>=1;i--){
+ let s="";
+ for(let j=0;j<i;j++)
+  s+=String.fromCharCode(65+j)+" ";
+ print(s);
+}
+}
+
+/* ============ PATTERN 10 ============ */
+function pattern10(){
+let ch=65;
+for(let i=1;i<=6;i++){
+ let s="";
+ for(let j=1;j<=i;j++)
+  s+=String.fromCharCode(ch++)+" ";
+ print(s);
+}
+}
+
+/* ============ PATTERN 11 ============ */
+function pattern11(){
+for(let i=0;i<6;i++){
+ let s="";
+ for(let j=i;j>=0;j--)
+  s+=String.fromCharCode(65+j)+" ";
+ print(s);
+}
+}
+
+/* ============ PATTERN 12 ============ */
+function pattern12(){
+let ch=65;
+for(let i=1;i<=6;i++){
+ let s="";
+ for(let j=1;j<=i;j++){
+   s+=String.fromCharCode(ch)+" ";
+   ch+=6;
+ }
+ print(s);
+ ch=66+i;
+}
+}
+
+/* ============ PATTERN 13 ============ */
+function pattern13(){
+for(let i=0;i<6;i++){
+ let s="";
+ for(let j=0;j<=i;j++){
+   if(j==0 || j==i)
+     s+="A ";
+   else
+     s+=String.fromCharCode(65+j)+" ";
+ }
+ print(s);
+}
+}
+
+/* ============ PATTERN 14 ============ */
+function pattern14(){
+for(let i=0;i<6;i++){
+ let s="";
+ for(let j=0;j<=i;j++)
+  s+=String.fromCharCode(65+j);
+ for(let j=i-1;j>=0;j--)
+  s+=String.fromCharCode(65+j);
+ print(s);
+}
+}
+
+/* ======= CALL ANY PATTERN ======= */
+pattern1();
+// pattern2();
+// pattern3();
+// ...
+// pattern14();
+
+</script>
+
+</body>
+</html>
