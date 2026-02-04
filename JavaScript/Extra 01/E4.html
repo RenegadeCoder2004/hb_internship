@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Exercise 04</title>
+</head>
+<body>
+
+<div class="calculator">
+    <h2>Calculator</h2>
+
+    <input type="number" id="num1" placeholder="Enter Number 1">
+    <input type="number" id="num2" placeholder="Enter Number 2">
+
+    <br>
+
+    <button onclick="add()">Addition</button>
+    <button onclick="subtract()">Subtraction</button>
+    <button onclick="divide()">Division</button>
+    <button onclick="square()">Square</button>
+    <button onclick="sqrt()">Square Root</button>
+
+    <p id="result"></p>
+</div>
+
+<script>
+
+    function add() {
+        let a = Number(document.getElementById("num1").value);
+        let b = Number(document.getElementById("num2").value);
+        document.getElementById("result").innerHTML = "Result: " + (a + b);
+    }
+
+    function subtract() {
+        let a = Number(document.getElementById("num1").value);
+        let b = Number(document.getElementById("num2").value);
+        document.getElementById("result").innerHTML = "Result: " + (a - b);
+    }
+
+    function divide() {
+        let a = Number(document.getElementById("num1").value);
+        let b = Number(document.getElementById("num2").value);
+
+        if (b === 0) {
+            document.getElementById("result").innerHTML = "Cannot divide by zero";
+        } else {
+            document.getElementById("result").innerHTML = "Result: " + (a / b);
+        }
+    }
+
+    function square() {
+        let a = Number(document.getElementById("num1").value);
+        document.getElementById("result").innerHTML = "Result: " + (a * a);
+    }
+
+    function sqrt() {
+        let a = Number(document.getElementById("num1").value);
+        document.getElementById("result").innerHTML = "Result: " + Math.sqrt(a);
+    }
+
+</script>
+
+</body>
+</html>
